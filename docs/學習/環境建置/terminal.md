@@ -7,8 +7,7 @@ type: ""
 title: Ternimal 設定
 created: 2024-04-02T03:06:22
 updated: 2024-04-02T03:06:22
-tags:
-  - 📥/📰️
+tags: [環境建制]
 ---
 
 ## 安裝ZSH
