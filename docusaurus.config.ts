@@ -34,17 +34,19 @@ const config: Config = {
       'classic',
       {
         docs: {
+          // id: 'product', // omitted => default instance
+          // path: 'docs',
+          // routeBasePath: 'docs',
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //  'https://gavinh0731.github.io/my-blog/',
         },
         blog: {
-          showReadingTime: true,
-          blogSidebarTitle: '所有文章',
-          blogSidebarCount: 'ALL',
-          postsPerPage: 10, //每頁顯示文章數
+          showReadingTime: true,        //顯示閱讀時間
+          blogTitle: '生活隨記',          //部落格名稱
+          blogSidebarTitle: '全部文章',  //側邊欄名稱
+          blogSidebarCount: 'ALL',      //顯示所有文章
+          postsPerPage: 10,             //每頁顯示文章數
+          // routeBasePath: 'happy', //設置多個部落格時使用
+          // path: './blog/happy',   //路徑
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -56,6 +58,26 @@ const config: Config = {
   //#region 多個blog
   plugins: [
     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'code',
+        routeBasePath: 'rb_code',
+        path: 'vault_code',
+        sidebarPath: './sidebarsCode.ts',
+        // ... other options
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docusaurus',
+        routeBasePath: 'rb_docusaurus',
+        path: 'vault_docusaurus',
+        sidebarPath: './sidebarsDocusaurus.ts',
+        // ... other options
+      },
+    ],
+    [
       '@docusaurus/plugin-content-blog',
       {
         blogSidebarTitle: '所有文章',
@@ -64,12 +86,12 @@ const config: Config = {
         //
         id: 'life',
         routeBasePath: '生活',
-        path: 'blogs/生活',
+        path: 'vault_blogs/生活',
       },
     ],
   ],
   //#endregion 多個blog
-
+  
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -90,8 +112,26 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: '文章',
+          label: '隨手筆記',
         },
+        //#region 文件
+        {
+          type: 'dropdown',
+          position: 'left',
+          label: '文章',
+          items: [
+            {
+
+              to: '/rb_code/code', label: '程式生活',
+            },
+            {
+              to: '/rb_docusaurus/category/tutorial---basics', label: '網站架設',
+
+            },
+          ],
+        },
+        //#endregion 文件
+
         // 導航欄部落格
         // { to: '/blog', label: 'Blog', position: 'left' },
         //#region blog
@@ -102,7 +142,7 @@ const config: Config = {
           items: [
             {
 
-              to: '/blog', label: '隨手筆記',
+              to: '/blog', label: '生活隨記',
             },
             {
               to: '/生活', label: '生活',
@@ -119,11 +159,11 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial Intro',
-              to: '/docs/intro',
+              to: '/rb_docusaurus/intro',
             },
             {
               label: 'Tutorial - Basics',
-              to: '/docs/category/tutorial---basics',
+              to: '/rb_docusaurus/category/tutorial---basics',
             },
             {
               label: '朝八晚八教學',
