@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_blog=self.webpackChunkmy_blog||[]).push([[6401],{6766:e=>{e.exports=JSON.parse('[{"label":"\u7a0b\u5f0f","permalink":"/my-blog/rb_code/tags/\u7a0b\u5f0f","count":1}]')}}]);
