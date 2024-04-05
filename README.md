@@ -2,6 +2,13 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+### NPM Version
+
+```
+Node version: v21.7.2
+npm start -- --host "0.0.0.0"
+```
+
 ### Installation
 
 ```
