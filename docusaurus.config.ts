@@ -4,7 +4,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 const config: Config = {
   title: '財穀資訊網',
-  tagline: '記錄我的學習內容',
+  tagline: 'python stock',
   favicon: 'img/cai_gu.ico',
 
   // Set the production url of your site here
