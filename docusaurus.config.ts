@@ -68,6 +68,7 @@ const config: Config = {
         path: 'vault_code',
         sidebarPath: './sidebarsCode.ts',
         // ... other options
+        remarkPlugins: [simplePlantUML],
       },
     ],
     [
@@ -78,6 +79,7 @@ const config: Config = {
         path: 'vault_docusaurus',
         sidebarPath: './sidebarsDocusaurus.ts',
         // ... other options
+        remarkPlugins: [simplePlantUML],
       },
     ],
     [
@@ -90,6 +92,7 @@ const config: Config = {
         id: 'life',
         routeBasePath: '生活',
         path: 'vault_blogs/生活',
+        remarkPlugins: [simplePlantUML],
       },
     ],
   ],
