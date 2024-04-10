@@ -187,3 +187,5 @@ git clone https://github.com/gavinh0731/linux_config.git
 > ```
 > 
 > 後邊再啟動iTerm就不會提示了。
+
+

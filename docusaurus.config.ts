@@ -1,6 +1,7 @@
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
+const simplePlantUML = require("@akebifiky/remark-simple-plantuml");
 
 const config: Config = {
   title: '財穀資訊網',
@@ -38,6 +39,7 @@ const config: Config = {
           // path: 'docs',
           // routeBasePath: 'docs',
           sidebarPath: './sidebars.ts',
+          remarkPlugins: [simplePlantUML],
         },
         blog: {
           showReadingTime: true,        //顯示閱讀時間
@@ -47,6 +49,7 @@ const config: Config = {
           postsPerPage: 10,             //每頁顯示文章數
           // routeBasePath: 'happy', //設置多個部落格時使用
           // path: './blog/happy',   //路徑
+          remarkPlugins: [simplePlantUML],
         },
         theme: {
           customCss: './src/css/custom.css',
